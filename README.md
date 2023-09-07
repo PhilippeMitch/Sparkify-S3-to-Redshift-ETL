@@ -30,6 +30,7 @@ log_data/2018/11/2018-11-13-events.json
 *  **Log Json Meta Information**: Contains the meta information that is required by AWS to correctly load the Log Dataset
 
 ## Project requirements
+![Alt text](https://github.com/PhilippeMitch/Sparkify-S3-to-Redshift-ETL/blob/main/images/aws%20udacity(1).png)<br>
 Using the song and event datasets, create a star schema optimized for queries on song play analysis including the following tables.
 #### Fact Table
 1. **songplays**: records in event data associated with song plays i.e. records with page `NextSong`
@@ -69,3 +70,5 @@ To be able to run this project on your local machine, make sure your Redshift al
    $ python etl.py
    ```
 By following this steps you will run an ETL pipeline that extracts their data from S3, stages them in Redshift, and transforms data into a set of dimensional tables for the analytics team to continue finding insights into what songs their users are listening to.
+
+![Alt text](https://github.com/PhilippeMitch/Sparkify-S3-to-Redshift-ETL/blob/main/images/data_in_redshift.jpg)<br>

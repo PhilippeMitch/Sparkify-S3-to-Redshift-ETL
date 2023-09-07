@@ -53,7 +53,7 @@ In order to complete this project, you'll need to use these tools:
 ## Project files
 1. `create_table.py`: In this file we connect to the database, drop tables if they already exist and create the fact and dimension tables for the star schema in Redshift. This way, we can run create_tables.py whenever you want to reset your database and test your ETL pipeline.
 2. `etl.py`: This is where we load data from S3 into staging tables on Redshift and then process that data into your analytics tables on Redshift.
-3. `sql_queries.py`: This is where you'll define you SQL statements, which will be imported into the two other files above.
+3. `sql_queries.py`: This is where we define the SQL statements, which will be imported into the two other files above.
 4. `README.md`: This is where you'll provide discussion on your process and decisions for this ETL pipeline.
 5. `dwh.cfg`: This is where we add redshift database and IAM role info for connection.
 

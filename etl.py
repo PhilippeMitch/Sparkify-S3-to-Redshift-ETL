@@ -14,6 +14,13 @@ from sql_queries import copy_table_queries, insert_table_queries
 def load_staging_tables(cur, conn):
     """
     fonction to load the stage tables
+
+    Input
+    -----
+        cur: cursor object
+            Allows Python code to execute query in a database session
+        conn: connection object
+             Handles the connection to the database instance.
     """
     for query in copy_table_queries:
         print('Stage tables are loading...')
@@ -25,6 +32,13 @@ def load_staging_tables(cur, conn):
 def insert_tables(cur, conn):
     """
     fonction to load the fact and dimension tables
+
+    Input
+    -----
+        cur: cursor object
+            Allows Python code to execute query in a database session
+        conn: connection object
+             Handles the connection to the database instance.
     """
     for query in insert_table_queries:
         print('Fact and dimenssion tables are loading...')
@@ -34,6 +48,10 @@ def insert_tables(cur, conn):
 
 
 def main():
+    """
+    This function is used to connection with sparkify database and gets cursor to it, 
+    load the stage tables and load the fact and dimension tables.
+    """
     # Get the connection information
     config = configparser.ConfigParser()
     config.read('dwh.cfg')
